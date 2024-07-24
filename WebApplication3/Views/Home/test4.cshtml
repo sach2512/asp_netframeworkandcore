@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "test4";
+}
+
+<h2>test4</h2>
+
+@{ 
+    <h1> the display using view bag is </h1>
+
+    <ul>
+        @foreach(int i in ViewBag.Color)
+            {
+                <li>@i</li>
+            }
+    </ul>
+}
+

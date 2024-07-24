@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "display";
+}
+
+<h2>display</h2>
+<div>
+    @{
+        <h1> the value of name is @TempData["name"]</h1>
+        <h1> the value of name is @TempData["price"]</h1>
+        <h1> the value of name is @TempData["id"]</h1>
+        <centre><a href="/Home/display">click here to go neew page</a></centre>
+        //values wont come because  it was alredy acessed in test6  tempdata is only avaible once 
+        //to avoid these we use tempdata.peek where ever we want ti retain values 
+        //let supoose we want to keep data across 30 pages we need to always right peek peek which is robust 
+        // so there is another method keep where if we write keep once it will retains all vales and all time and all pages
+    }
+</div>
+

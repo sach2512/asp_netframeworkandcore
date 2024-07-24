@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "applicationview2";
+}
+
+<h2>index12</h2>
+<div>
+    <table border="1" align="center" width="20%">
+        <caption>Product Details</caption>
+        <tr><td>Id:</td><td>@HttpContext.Current.Application["Id"]</td></tr>
+        <tr><td>Name:</td><td>@HttpContext.Current.Application["Name"]</td></tr>
+        <tr>
+            <td>Price:</td>
+            <td>
+                @{
+                    double Price = Convert.ToDouble(HttpContext.Current.Application["Price"]);
+                    Price = Price + Price * 10 / 100;
+                    @Price
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+

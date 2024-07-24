@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "displaycookie2";
+    HttpCookie logincookie = Request.Cookies["logincookie"];
+
+
+    int id = int.Parse(logincookie["id"]);
+    <h2>@ViewBag.Title</h2>
+    <div>
+        <h1>Name is @logincookie["name"];</h1>
+        <h1>Price is @logincookie["price"];</h1>
+        <h1>ID is @id</h1>
+    </div>
+}
+
+<h2>displaycookie2</h2>
+
+

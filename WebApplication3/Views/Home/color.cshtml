@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "color";
+}
+
+<h2>color</h2>
+<div>
+    <h1>the color in the list are</h1>
+    @{
+        
+            var colors = ViewData["color"] as IEnumerable<int>; 
+        // conversion is madatory for any manipulation because view data is object
+       
+
+        <ul>
+            @{
+
+                foreach (int i in colors)
+                {
+                    <li>@i</li>
+                }
+            }
+        </ul>
+    }
+</div>
+
